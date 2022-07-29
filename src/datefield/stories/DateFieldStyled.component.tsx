@@ -23,21 +23,18 @@ export const DateFieldStyled: React.FC<DateFieldStyledProps> = props => {
   const datefield = useDateFieldState({ ...props, state });
 
   return (
-    <div className="flex flex-col items-start">
-      <DateFieldLabel state={datefield} className="mb-2">
+    <div className="datefield--wrapper">
+      <DateFieldLabel state={datefield} className="datefield__label">
         {props.label}
       </DateFieldLabel>
-      <DateField
-        state={datefield}
-        className="rounded-sm border-solid border inline-flex px-1 py-px border-[#6f6f6f]"
-      >
+      <DateField state={datefield} className="datefield">
         {state.segments.map((segment, i) => (
           <DateSegment
             key={i}
             segment={segment}
             state={state}
-            className={`rounded py-0 px-px font-mono focus:text-blue-500 focus:outline-none ${
-              segment.isPlaceholder ? "text-[#767676]" : ""
+            className={` datefield__date-segment ${
+              segment.isPlaceholder ? "datefield__placeholder" : ""
             }`}
           >
             {segment.text}

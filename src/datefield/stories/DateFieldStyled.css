@@ -1,0 +1,39 @@
+.datefield--wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.datefield {
+  display: flex;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.datefield__label {
+  margin-bottom: 0.5rem;
+}
+
+.datefield__date-segment {
+  outline: none !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  border-radius: 0.25rem;
+}
+
+.datefield__date-segment:focus {
+  color: #0070f3;
+  border-width: 2px;
+}
+
+.datefield__placeholder {
+  color: #767676;
+}

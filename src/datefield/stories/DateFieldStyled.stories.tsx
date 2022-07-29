@@ -7,7 +7,7 @@ import js from "./templates/DateFieldStyledJsx";
 import ts from "./templates/DateFieldStyledTsx";
 import { DateFieldStyled } from "./DateFieldStyled.component";
 
-import "./tailwind.css";
+import "./DateFieldStyled.css";
 
 type Meta = ComponentMeta<typeof DateFieldStyled>;
 // type Story = ComponentStoryObj<typeof DateFieldStyled>;
@@ -19,12 +19,6 @@ export default {
     layout: "centered",
     preview: createPreviewTabs({ js, ts }),
   },
-  decorators: [
-    Story => {
-      document.body.id = "tailwind";
-      return <Story />;
-    },
-  ],
 } as Meta;
 
 export const Default = () => {
